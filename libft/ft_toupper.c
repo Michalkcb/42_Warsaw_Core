@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 15:52:02 by mbany             #+#    #+#             */
-/*   Updated: 2024/02/28 16:08:18 by mbany            ###   ########.fr       */
+/*   Updated: 2024/02/29 14:09:31 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 
 int	ft_toupper(char c)
 {
-    while (c >= 97 && c <= 122)
-		return (c - 32);
-    return (c);
+	return (c - 32);
+	return (c);
 }
 
 // int main()
