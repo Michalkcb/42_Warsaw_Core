@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 14:16:56 by mbany             #+#    #+#             */
-/*   Updated: 2024/02/28 15:32:03 by mbany            ###   ########.fr       */
+/*   Updated: 2024/02/29 14:51:19 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	ft_isalpha(int c)
 // {
 //     char test = 'A';
 //     if (ft_isalpha(test))
-//         printf ("is alphabetic .\n");
+//         printf ("yes.\n");
 //     else
-//         printf ("not alpha.\n");
+//         printf ("no.\n");
 
 //     return (0);
 // }
