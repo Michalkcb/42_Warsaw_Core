@@ -2,23 +2,9 @@
 
 - 🔭 I’m currently working on
 
-        Changing the layout of the home page.
-        JavaScript portfolio projects.
-        React portfolio projects.
+        Libft
+- 🌱 This projesc si in C language
 
-- 🌱 I’m currently learning:
-    In Proggramming at 42 Warsaw.
-    Now I'm in the process of learning C, JavaScript and React.
-
-
-- 🤔 I’m looking for help
-
-    To find opportunity to make commercial projects as Front-end developer.
-
-
-- 📫 How to reach me
-
-michalkcb@gmail.com
 
 Codewars Profile Badges
 <br>
@@ -27,7 +13,7 @@ Codewars Profile Badges
 </span>
 
 ## Stuff I know 🤓
-[![My Skills](https://skillicons.dev/icons?i=git,github,js,react,nodejs,html,css,sass,tailwind,bootstrap,raspberrypi,vscode)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=c,git,github,vscode)](https://skillicons.dev)
 
 ## Stuff I want to learn 🤓
 [![My Skills](https://skillicons.dev/icons?i=mongodb,react,angular,mysql,php)](https://skillicons.dev)
