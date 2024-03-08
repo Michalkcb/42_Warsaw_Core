@@ -12,12 +12,8 @@ Codewars Profile Badges
   <img src="https://www.codewars.com/users/Michalkcb/badges/large" alt="Michalkcb" />
 </span>
 
-## Stuff I know 🤓
+## Stuff I use here 🤓
 [![My Skills](https://skillicons.dev/icons?i=c,git,github,vscode)](https://skillicons.dev)
-
-## Stuff I want to learn 🤓
-[![My Skills](https://skillicons.dev/icons?i=mongodb,react,angular,mysql,php)](https://skillicons.dev)
-
 
 
 <span>
