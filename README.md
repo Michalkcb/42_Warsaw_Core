@@ -5,16 +5,15 @@
         Libft
 - 🌱 This projesc si in C language
 
+## Stuff I use here 🤓
+[![My Skills](https://skillicons.dev/icons?i=c,git,github,vscode)](https://skillicons.dev)
+
 
 Codewars Profile Badges
 <br>
 <span>
   <img src="https://www.codewars.com/users/Michalkcb/badges/large" alt="Michalkcb" />
 </span>
-
-## Stuff I use here 🤓
-[![My Skills](https://skillicons.dev/icons?i=c,git,github,vscode)](https://skillicons.dev)
-
 
 <span>
 <img  height="150px" src="https://github-readme-stats.vercel.app/api/top-langs?username=Michalkcb&show_icons=true&locale=en&layout=compact&theme=transparent" alt="Michalkcb" /> 
