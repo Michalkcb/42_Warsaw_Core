@@ -3,7 +3,7 @@
 - 🔭 I’m currently working on
 
         Libft
-- 🌱 This projesc si in C language
+- 🌱 This projesc si in [![My Skills](https://skillicons.dev/icons?i=c)](https://skillicons.dev) language
 
 ## Stuff I use here 🤓
 [![My Skills](https://skillicons.dev/icons?i=c,git,github,vscode)](https://skillicons.dev)
