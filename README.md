@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=Hello+I'm+Michael+and+this+is+my+adventure+through+42+Warsaw+coding+academy)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=Hello+I'm+Michael+and+this+is+my+;adventure+through+42+Warsaw+;coding+academy)](https://git.io/typing-svg)
 
 - 🔭 I’m currently working on
 
