@@ -6,12 +6,9 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:43:56 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/12 10:55:27 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/12 11:21:09 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
-
 
 // Turn in files -
 // Parameters s: The string on which to iterate.
@@ -22,56 +19,34 @@
 // the string passed as argument, passing its index
 // as first argument. Each character is passed by
 // address to ’f’ to be modified if necessary.
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+
+#include "libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
 // #include <stdlib.h>
-
-// size_t	ft_strlen(const char *s)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// 	while (s[i] != 0)
-// 		i++;
-// 	return (i);
-// }
-
-// char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
-// {
-// 	int		i;
-// 	char	*dest;
-
-// 	i = 0;
-// 	dest = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-// 	while (!dest)
-// 		return (0);
-// 	while (s[i])
-// 	{
-// 		dest[i] = f(i, s[i]);
-// 		i++;
-// 	}
-// 	dest[i] = 0;
-// 	return (dest);
-// }
-
 // #include <stdio.h>
-// char	my_f(unsigned int i, char c)
+// void my_f(unsigned int i, char *c)
 // {
-// 	(void)i;
-// 	if (c >= 'a' && c <= 'z')
-// 		return (c - 3);
-// 	else
-// 		return (c);
+//     (void)i;
+//     if (*c >= 'a' && *c <= 'z')
+//         *c += 3;
 // }
 
 // int main()
 // {
 // 	char s[] = "abcd";
-// 	char *r = ft_strmapi(s,&my_f);
-// 	printf("text przed: %s\n", s);
-// 	printf("text przed: %s\n", r);
-// 	free(r);
+// 	ft_striteri(s, my_f);
+// 	printf("Wynik działania ft_striteri: %s\n", s);
+// 	return (0);
 // }
