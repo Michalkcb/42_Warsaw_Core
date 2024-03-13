@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:40:37 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/13 12:38:25 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/13 16:10:08 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,14 @@ static int split_words(char **result, char const *s, char c, int word)
 	int start_i;
 	int end_i;
 
-	start_i = 0;
 	end_i = 0;
+	start_i = 0;
+
 	while (s[end_i])
 	{
 		if (s[end_i] == c || s[end_i] == 0)
 			start_i = end_i + 1;
-		if (s[end_i] != c && (s[end_i + 1] != c || s[end_i] != 0))
+		if (s[end_i] != c && (s[end_i + 1] == c || s[end_i] == 0))
 		{
 			result[word] = malloc(sizeof(char) * (end_i - start_i + 2));
 			if (!result[word])
@@ -88,7 +89,7 @@ char **ft_split(char const *s, char c)
 	char **result;
 	if (!s)
 		return (NULL);
-	result = malloc(sizeof(char) * (count_words(s, c) + 1));
+	result = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!result)
 		return (NULL);
 	if (!split_words(result, s, c, 0))
@@ -99,15 +100,15 @@ char **ft_split(char const *s, char c)
 	return (result);
 }
 
-int main()
-{
-	char s[] = "qwe/rtyu/iopa/sdf/ghz/xcv/b";
-	char c = '/';
-	char **r = ft_split(s, c);
-	int i = 0;
-	while (r[i])
-	{
-		printf("%s\n", r[i]);
-		i++;
-	}
-}
+// int main()
+// {
+// 	char s[] = "qwe/rtyu/iopa/sdf/ghz/xcv/b";
+// 	char c = '/';
+// 	char **r = ft_split(s, c);
+// 	int i = 0;
+// 	while (r[i])
+// 	{
+// 		printf("%s\n", r[i]);
+// 		i++;
+// 	}
+// }
