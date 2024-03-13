@@ -6,10 +6,9 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:40:37 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/13 10:40:31 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/13 12:38:25 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 // Turn in files -
 // Parameters s: The string to be split.
@@ -22,87 +21,93 @@
 // character ’c’ as a delimiter. The array must end
 // with a NULL pointer.
 
+#include "libft.h"
+size_t ft_strlcpy(char *d, const char *s, size_t n)
+{
+	size_t i;
+	i = 0;
+
+	while (s[i])
+		i++;
+	if (n == 0)
+		return (i);
+	while (--n && *s)
+		*d++ = *s++;
+	*d = '\0';
+	return (i);
+}
+
+static int count_words(char const *s, char c)
+{
+	int i;
+	int word_count;
+
+	i = 0;
+	word_count = 0;
+
+	while ((s[i] != 0))
+	{
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == 0))
+			word_count++;
+		i++;
+	}
+	return (word_count);
+}
+
+static int split_words(char **result, char const *s, char c, int word)
+{
+	int start_i;
+	int end_i;
+
+	start_i = 0;
+	end_i = 0;
+	while (s[end_i])
+	{
+		if (s[end_i] == c || s[end_i] == 0)
+			start_i = end_i + 1;
+		if (s[end_i] != c && (s[end_i + 1] != c || s[end_i] != 0))
+		{
+			result[word] = malloc(sizeof(char) * (end_i - start_i + 2));
+			if (!result[word])
+			{
+				while (word++)
+					free(result[word]);
+				return (0);
+			}
+			ft_strlcpy(result[word], (s + start_i), end_i - start_i + 2);
+			word++;
+		}
+		end_i++;
+	}
+	result[word] = 0;
+	return (1);
+}
+
 char **ft_split(char const *s, char c)
 {
-	char	**result;
-	
+	char **result;
+	if (!s)
+		return (NULL);
+	result = malloc(sizeof(char) * (count_words(s, c) + 1));
+	if (!result)
+		return (NULL);
+	if (!split_words(result, s, c, 0))
+	{
+		free(result);
+		return (NULL);
+	}
+	return (result);
 }
 
 int main()
 {
-	char s[] = 'qwe/rtyu/iopa/sdf/ghz/xcv/b';
+	char s[] = "qwe/rtyu/iopa/sdf/ghz/xcv/b";
 	char c = '/';
-	char r = ft_split(s, c);
-	printf("%s\n", r)
-}
-
-
-#include "libft.h"
-
-// Funkcja zlicza liczbę słów w ciągu 's' oddzielonych znakiem 'c'
-static int	numwords(char const *s, char c)
-{
-	int	cur; // Aktualny indeks w ciągu 's'
-	int	word_num; // Liczba słów
-
-	cur = 0; // Inicjalizuje indeks jako 0
-	word_num = 0; // Inicjalizuje liczbę słów jako 0
-	while (s[cur] != 0) // Pętla przechodzi przez cały ciąg
+	char **r = ft_split(s, c);
+	int i = 0;
+	while (r[i])
 	{
-		// Jeśli aktualny znak nie jest separatorem 'c' i następny znak jest separatorem lub końcem ciągu, zwiększa liczbę słów
-		if (s[cur] != c && (s[cur + 1] == c || s[cur + 1] == 0))
-			word_num++;
-		cur++; // Inkrementuje indeks
+		printf("%s\n", r[i]);
+		i++;
 	}
-	return (word_num); // Zwraca liczbę słów
-}
-
-// Funkcja dzieli ciąg 's' na słowa i zapisuje je do tablicy 'result'
-static int	split_words(char **result, char const *s, char c, int word)
-{
-	int		start_cur; // Indeks początkowy słowa
-	int		end_cur; // Indeks końcowy słowa
-
-	end_cur = 0; // Inicjalizuje indeks końcowy jako 0
-	start_cur = 0; // Inicjalizuje indeks początkowy jako 0
-	while (s[end_cur]) // Pętla przechodzi przez cały ciąg
-	{
-		// Jeśli znak jest separatorem lub końcem ciągu, ustawia indeks początkowy na następny znak
-		if (s[end_cur] == c || s[end_cur] == 0)
-			start_cur = end_cur + 1;
-		// Jeśli znak nie jest separatorem i następny znak jest separatorem lub końcem ciągu
-		if (s[end_cur] != c && (s[end_cur + 1] == c || s[end_cur + 1] == 0))
-		{
-			// Alokuj pamięć dla słowa w tablicy wynikowej
-			result[word] = malloc(sizeof(char) * (end_cur - start_cur + 2));
-			if (!result[word]) // Sprawdza, czy alokacja się powiodła
-			{
-				// Jeśli nie, zwalnia pamięć zaalokowaną dla wcześniej utworzonych słów
-				while (word++)
-					free(result[word]);
-				return (0); // Zwraca 0 (błąd alokacji)
-			}
-			// Kopiuje słowo z ciągu 's' do tablicy wynikowej
-			ft_strlcpy(result[word], (s + start_cur), end_cur - start_cur + 2);
-			word++; // Inkrementuje liczbę słów
-		}
-		end_cur++; // Inkrementuje indeks końcowy
-	}
-	result[word] = 0; // Ustawia znak końca tablicy wynikowej
-	return (1); // Zwraca 1 (sukces)
-}
-
-// Funkcja dzieli ciąg 's' na słowa oddzielone separatorem 'c' i zwraca tablicę wskaźników do nowych ciągów znaków
-char	**ft_split(char const *s, char c)
-{
-	char	**result; // Deklaruje tablicę wskaźników do nowych ciągów znaków
-
-	if (!s) // Sprawdza, czy ciąg 's' istnieje
-		return (NULL); // Jeśli nie, zwraca NULL
-	result = malloc(sizeof(char *) * (numwords(s, c) + 1)); // Alokuje pamięć dla tablicy wynikowej
-	if (!result) // Sprawdza, czy alokacja się powiodła
-		return (NULL); // Jeśli nie, zwraca NULL
-	if (!split_words(result, s, c, 0)) // Wywołuje funkcję do dzielenia ciągu na słowa
-		return (NULL); // Jeśli nie powiodło się, zwraca NULL
-	return (result); // Zwraca tablicę wynikową
 }
