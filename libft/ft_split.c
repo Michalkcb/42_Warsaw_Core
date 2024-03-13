@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:40:37 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/12 16:25:52 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/13 10:40:31 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,16 @@
 
 char **ft_split(char const *s, char c)
 {
-
+	char	**result;
+	
 }
 
 int main()
 {
 	char s[] = 'qwe/rtyu/iopa/sdf/ghz/xcv/b';
 	char c = '/';
+	char r = ft_split(s, c);
+	printf("%s\n", r)
 }
 
 
