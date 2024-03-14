@@ -6,26 +6,24 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 09:13:01 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/01 09:37:46 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/06 13:26:32 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (str[i])
-	{
+	while (s[i] != 0)
 		i++;
-	}
 	return (i);
 }
 
 // int main ()
 // {
 //     char string[] = "ieu";
-//     printf("%d", ft_strlen(string));
+//     printf("%zu", ft_strlen(string));
 // }
