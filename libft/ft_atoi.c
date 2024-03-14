@@ -6,11 +6,11 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 15:52:02 by mbany             #+#    #+#             */
-/*   Updated: 2024/02/29 18:39:40 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 10:03:08 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {
