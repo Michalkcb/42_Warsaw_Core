@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:40:52 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/11 13:38:22 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 10:05:34 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 // from the beginning and the end of the string.
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {
