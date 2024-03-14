@@ -6,16 +6,16 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 15:52:02 by mbany             #+#    #+#             */
-/*   Updated: 2024/02/29 14:09:31 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 10:04:41 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_toupper(char c)
 {
-	return (c - 32);
+	while (c >= 'a' && c <= 'z')
+		return (c - 32);
 	return (c);
 }
 
