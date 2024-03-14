@@ -6,11 +6,11 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 18:26:19 by mbany             #+#    #+#             */
-/*   Updated: 2024/02/29 18:33:28 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 09:58:31 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
