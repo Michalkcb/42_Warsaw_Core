@@ -6,22 +6,20 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 13:46:06 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/05 10:53:06 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 09:54:04 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
-void    *ft_memchr(void const *s, int c, size_t n)
+void	*ft_memchr(void const *s, int c, size_t n)
 {
-    while (n--)
-    {
-        if (*(unsigned char *)s++ == (unsigned char)c)
-            return ((void *)(unsigned char *)s - 1);
-    }
-    return (NULL);
+	while (n--)
+	{
+		if (*(unsigned char *)s++ == (unsigned char)c)
+			return ((void *)(unsigned char *)s - 1);
+	}
+	return (NULL);
 }
 
 // int main(void)
