@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:01:27 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/10 14:52:25 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 11:45:35 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	s_len;
 	size_t	d_len;
-	int		i;
+	size_t		i;
 	char	*dest;
 
 	i = 0;
