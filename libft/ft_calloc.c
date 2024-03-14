@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:13:50 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/07 15:11:55 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 10:00:32 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@ void	ft_bzero(void *s, size_t n)
 		*(unsigned char *)s++ = 0;
 }
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*dest;
+
 	dest = (void *)malloc(nmemb * size);
 	if (!dest)
 		return (0);
