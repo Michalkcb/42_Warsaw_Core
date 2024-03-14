@@ -6,11 +6,11 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 14:16:56 by mbany             #+#    #+#             */
-/*   Updated: 2024/02/29 14:51:36 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 09:59:02 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
