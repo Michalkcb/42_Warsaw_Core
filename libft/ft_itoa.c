@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:41:49 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/11 16:17:49 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 09:56:37 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 // Negative numbers must be handled.
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	nbr_len(int nbr)
 {
