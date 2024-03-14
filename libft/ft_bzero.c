@@ -6,13 +6,11 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 12:48:10 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/03 14:51:05 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 09:59:28 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
-
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
