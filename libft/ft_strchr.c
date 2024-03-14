@@ -6,11 +6,11 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 16:10:06 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/02 15:13:26 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 11:42:30 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(char const *str, int c)
 {
@@ -18,18 +18,18 @@ char	*ft_strchr(char const *str, int c)
 	{
 		if (*str == (char)c)
 			return ((char *)str);
-		*str++;
+		str++;
 	}
-		if (*str == (char)c)
-			return ((char *)str);
-		else
-			return (NULL);
-	
-
+	if (*str == (char)c)
+		return ((char *)str);
+	else
+		return (NULL);
 }
 
-// *str: To jest dereferencja wskaźnika. Używamy * przed wskaźnikiem, aby uzyskać wartość, na którą wskaźnik wskazuje.
-// str*: To jest deklaracja wskaźnika. Używamy * po typie danych, aby zadeklarować wskaźnik na ten typ danych.
+// *str: To jest dereferencja wskaźnika. Używamy * przed wskaźnikiem, 
+//aby uzyskać wartość, na którą wskaźnik wskazuje.
+// str*: To jest deklaracja wskaźnika. Używamy * po typie danych, 
+//aby zadeklarować wskaźnik na ten typ danych.
 // int main(void)
 // {
 //     char str[] = "bca";
