@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:48:01 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/03 15:09:59 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 10:06:22 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@
 // External functs. write
 // Description Outputs the character ’c’ to the given file
 // descriptor.
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
