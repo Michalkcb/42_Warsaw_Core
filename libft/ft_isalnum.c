@@ -6,11 +6,11 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 14:47:32 by mbany             #+#    #+#             */
-/*   Updated: 2024/02/29 18:25:32 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 10:00:39 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
