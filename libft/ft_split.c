@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:40:37 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/13 16:10:08 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 10:06:12 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@
 // with a NULL pointer.
 
 #include "libft.h"
-size_t ft_strlcpy(char *d, const char *s, size_t n)
-{
-	size_t i;
-	i = 0;
 
+size_t	ft_strlcpy(char *d, const char *s, size_t n)
+{
+	size_t	i;
+
+	i = 0;
 	while (s[i])
 		i++;
 	if (n == 0)
@@ -37,14 +38,13 @@ size_t ft_strlcpy(char *d, const char *s, size_t n)
 	return (i);
 }
 
-static int count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
-	int i;
-	int word_count;
+	int	i;
+	int	word_count;
 
 	i = 0;
 	word_count = 0;
-
 	while ((s[i] != 0))
 	{
 		if (s[i] != c && (s[i + 1] == c || s[i + 1] == 0))
@@ -54,14 +54,13 @@ static int count_words(char const *s, char c)
 	return (word_count);
 }
 
-static int split_words(char **result, char const *s, char c, int word)
+static int	split_words(char **result, char const *s, char c, int word)
 {
-	int start_i;
-	int end_i;
+	int	start_i;
+	int	end_i;
 
 	end_i = 0;
 	start_i = 0;
-
 	while (s[end_i])
 	{
 		if (s[end_i] == c || s[end_i] == 0)
@@ -84,9 +83,10 @@ static int split_words(char **result, char const *s, char c, int word)
 	return (1);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **result;
+	char	**result;
+
 	if (!s)
 		return (NULL);
 	result = malloc(sizeof(char *) * (count_words(s, c) + 1));
