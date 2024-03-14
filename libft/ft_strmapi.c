@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:43:00 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/12 10:43:19 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 10:05:53 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 // string ’s’, and passing its index as first argument
 // to create a new string (with malloc(3)) resulting
 // from successive applications of ’f’.
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
