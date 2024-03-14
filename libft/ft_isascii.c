@@ -6,11 +6,11 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 14:52:34 by mbany             #+#    #+#             */
-/*   Updated: 2024/02/29 18:25:09 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 09:59:38 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
