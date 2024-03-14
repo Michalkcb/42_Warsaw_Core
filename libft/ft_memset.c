@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 10:55:10 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/05 16:23:51 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 10:07:55 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 /* ************************************************************************** */
 
 // #include "libft.h"
-
 
 /*
 ** The ft_memset function fills a block of memory with a specified value.
@@ -62,6 +61,7 @@
 ** (The function fills the numbers array with zeros, resulting in
 ** [0, 0, 0, 0, 0])
 */
+#include "libft.h"
 
 void	*ft_memset(void *str, int c, size_t n)
 {
