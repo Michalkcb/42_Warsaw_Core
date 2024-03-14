@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:49:56 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/07 18:35:12 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/14 09:51:43 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
 // Description Outputs the integer ’n’ to the given file
 // descriptor.
 
-#include <unistd.h>
-#include <stdio.h>  
+#include "libft.h" 
 
 void	ft_putchar_fd(char c, int fd)
 {
