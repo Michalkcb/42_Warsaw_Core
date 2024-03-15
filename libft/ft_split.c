@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:40:37 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/14 10:06:12 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/15 10:54:47 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static int	split_words(char **result, char const *s, char c, int word)
 	{
 		if (s[end_i] == c || s[end_i] == 0)
 			start_i = end_i + 1;
-		if (s[end_i] != c && (s[end_i + 1] == c || s[end_i] == 0))
+		if (s[end_i] != c && (s[end_i + 1] == c || s[end_i + 1] == 0))
 		{
 			result[word] = malloc(sizeof(char) * (end_i - start_i + 2));
 			if (!result[word])
