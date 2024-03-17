@@ -20,26 +20,6 @@
 
 #include "libft.h" 
 
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != 0)
-		i++;
-	return (i);
-}
-
-void	ft_putstr_fd(char *s, int fd)
-{
-	write(fd, s, ft_strlen(s));
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
