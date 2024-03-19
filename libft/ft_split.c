@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:40:37 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/15 10:54:47 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/18 11:02:57 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,6 @@
 // with a NULL pointer.
 
 #include "libft.h"
-
-size_t	ft_strlcpy(char *d, const char *s, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	if (n == 0)
-		return (i);
-	while (--n && *s)
-		*d++ = *s++;
-	*d = '\0';
-	return (i);
-}
 
 static int	count_words(char const *s, char c)
 {
