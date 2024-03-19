@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:43:00 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/14 10:05:53 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/18 11:03:35 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,6 @@
 // to create a new string (with malloc(3)) resulting
 // from successive applications of ’f’.
 #include "libft.h"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != 0)
-		i++;
-	return (i);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
