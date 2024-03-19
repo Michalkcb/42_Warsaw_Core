@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:40:52 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/14 10:05:34 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/18 11:03:57 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,45 +22,6 @@
 // from the beginning and the end of the string.
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != 0)
-		i++;
-	return (i);
-}
-
-char	*ft_strchr(char const *str, int c)
-{
-	while (*str)
-	{
-		if (*str == (char)c)
-			return ((char *)str);
-		str++;
-	}
-	if (*str == (char)c)
-		return ((char *)str);
-	else
-		return (NULL);
-}
-
-size_t	ft_strlcpy(char *d, const char *s, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	if (n == 0)
-		return (i);
-	while (--n && *s)
-		*d++ = *s++;
-	*d = '\0';
-	return (i);
-}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
