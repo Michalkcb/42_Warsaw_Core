@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 13:00:52 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/22 09:49:24 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/22 09:51:07 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,31 @@
 #define BUFFER_SIZE = 42
 #endif
 
-// stage 2
+// stage 3
 char *get_next_line(int fd)
 {
-	return ("hello");
+	int	byte;
+	char	c;
+	char	*str_buffer;
+	int	i;
+	i = 0;
+	str_buffer = (char *)malloc(10000000);
+	byte = read(fd, &c, 1);
+while (byte > 0)
+{
+	str_buffer[i] = c;
+	i++;
+	if(c== '\n' || c == EOF)
+		break;
+	byte = read(fd, &c, 1);
+}
+if (i == 0 || byte < 0)
+{
+	free(str_buffer);
+	return(NULL);
+}
+	str_buffer[i] = '\0';
+	return (str_buffer);
 }
 int main(void)
 {
@@ -35,7 +56,7 @@ int main(void)
 	path = "file1.txt";
 	fd = open(path, O_RDONLY);
 	i = 0;
-	while (i < 6)
+	while (i < 16)
 	{
 		str = get_next_line(fd);
 		printf("i: %i\n", i);
