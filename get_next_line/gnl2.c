@@ -1,6 +1,7 @@
 #include "get_next_line.h"  // Dołączenie pliku nagłówkowego get_next_line.h, który zawiera deklaracje funkcji i stałe.
 
 // Funkcja obliczająca długość ciągu znaków, uwzględniając znak nowej linii.
+
 int ft_strlen(char *s)
 {
   int i = 0;  // Inicjalizacja licznika.
