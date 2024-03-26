@@ -6,23 +6,21 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 14:02:40 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/19 15:25:10 by mbany            ###   ########.fr       */
+/*   Updated: 2024/03/25 15:34:43 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+
 # ifndef BUFFER_SIZE
-# define BUFFER_SIZE 42
+#  define BUFFER_SIZE 10
 # endif
-# include <stdlib.h>
+
 # include <unistd.h>
+# include <stdlib.h>
 # include <fcntl.h>
 
-char    *get_next_line(int fd);
-char	*ft_strchr(char const *str, int c);
-char	*ft_strdup(const char *s);
-size_t	ft_strlen(const char *s);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*get_next_line(int fd);
+
 #endif
