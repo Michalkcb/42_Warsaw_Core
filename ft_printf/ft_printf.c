@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 13:08:27 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/08 15:44:21 by mbany            ###   ########.fr       */
+/*   Updated: 2024/04/08 16:05:23 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ static int ft_print_arg(va_list args, int s)
 		i = ft_put_s(va_arg(args, char *));
 	else if (s == 'd')
 		i = ft_put_n(va_arg(args, int));
+	else if (s == '%')
+		i = ft_put_c(s);
 	return (i);
 }
 
@@ -111,4 +113,6 @@ int main()
 	ft_printf("%s\n", s);
 	int d = 999;
 	ft_printf("%d\n", d);
+	int perc = '%';
+	ft_printf("%%\n", perc);
 }
