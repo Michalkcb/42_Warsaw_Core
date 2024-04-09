@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 13:08:27 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/09 15:54:51 by mbany            ###   ########.fr       */
+/*   Updated: 2024/04/09 16:39:09 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,29 @@ int	ft_put_u(unsigned int n)
 	return (ft_put_u_rec(n, 0));
 }
 
+static int ft_put_x_rec(unsigned int n, char *hex, int len)
+{
+	if (n <= 15)
+		len += ft_put_c(hex[n % 16]);
+	else
+	{
+		len = ft_put_x_rec(n / 16, hex, len);
+		len += ft_put_c(hex[n % 16]);
+	}
+	return (len);
+}
+
+int ft_put_x(unsigned int n, int s)
+{
+	char	*hex;
+
+	if (s == 'x')
+		hex = "0123456789abcdef";
+	else
+		hex = "0123456789ABCDEF";
+	return (ft_put_x_rec(n, hex, 0));
+}
+
 static int ft_print_arg(va_list args, int s)
 {
 	int i;
@@ -143,8 +166,11 @@ int main()
 	ft_printf("%d\n", d);
 		int i = 666;
 	ft_printf("%i\n", i);
-	int perc = '%';
-	ft_printf("%%\n", perc);
+	ft_printf("%%\n");
 	int u = 777777777;
 	ft_printf("%u\n", u);
+	int x = 15;
+	ft_printf("%x\n", x);
+	int X = 31;
+	ft_printf("%X\n", X);
 }
