@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 13:08:27 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/08 16:05:23 by mbany            ###   ########.fr       */
+/*   Updated: 2024/04/09 15:25:50 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,31 +43,34 @@ int	ft_put_s(char *str)
 	write(1, str, i);
 	return (1);
 }
-int	ft_put_n(int nb)
+static int	ft_put_d_rec(int nb, int len)
 {
 	if (nb == -2147483648)
 	{
-		ft_put_c('-');
-		ft_put_c('2');
-		nb = 147483648;
+		len += ft_put_s("-2147483648");
+		return (len);
 	}
-	if (nb < 0)
+	else if (nb < 0)
 	{
-		ft_put_c('-');
-		nb *= -1;
+		len += ft_put_c('-');
+		len = ft_put_d_rec(-nb, len);
 	}
-	if (nb >= 10)
+	else if (nb >= 10)
 	{
-		ft_put_n(nb / 10);
-		ft_put_n(nb % 10);
+		len = ft_put_d_rec(nb / 10, len);
+		len += ft_put_c(nb % 10 + '0');
 	}
 	else
 	{
-		ft_put_c(nb + '0');
+		len += ft_put_c(nb + '0');
 	}
-	return (1);
+	return (len);
 }
 
+int	ft_put_n(int n)
+{
+	return (ft_put_d_rec(n, 0));
+}
 static int ft_print_arg(va_list args, int s)
 {
 	int i;
@@ -77,10 +80,14 @@ static int ft_print_arg(va_list args, int s)
 		i = ft_put_c(va_arg(args, int));
 	else if (s == 's')
 		i = ft_put_s(va_arg(args, char *));
-	else if (s == 'd')
+	else if (s == 'd' || s == 'i')
 		i = ft_put_n(va_arg(args, int));
 	else if (s == '%')
 		i = ft_put_c(s);
+	else if (s == 'u')
+		i = ft_put_u(va_arg(args, unsigned int));
+	else if (s == 'x' || s == 'X')
+		i = ft_put_x(va_arg(args, unsigned int), s);
 	return (i);
 }
 
@@ -113,6 +120,8 @@ int main()
 	ft_printf("%s\n", s);
 	int d = 999;
 	ft_printf("%d\n", d);
+		int i = 666;
+	ft_printf("%i\n", i);
 	int perc = '%';
 	ft_printf("%%\n", perc);
 }
