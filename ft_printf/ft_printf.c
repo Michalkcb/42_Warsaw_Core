@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 13:08:27 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/09 16:39:09 by mbany            ###   ########.fr       */
+/*   Updated: 2024/04/10 16:05:11 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,47 @@ int ft_put_x(unsigned int n, int s)
 	return (ft_put_x_rec(n, hex, 0));
 }
 
+int	ft_len_ptr(size_t nb)
+{
+	int	len;
+	len = 0;
+	while (nb != 0)
+	{
+		len++;
+		nb = nb / 16;
+	}
+	return (len);
+}
+void	ft_put_ptr(size_t nb)
+{
+	if (nb >= 16)
+	{
+		ft_put_ptr(nb / 16);
+		ft_put_ptr(nb % 16);
+	}
+	else
+	{
+		if (nb <= 9)
+			ft_putchar((nb + '0'));
+		else
+			ft_putchar((nb - 10 + 'a'));
+	}
+}
+int	ft_put_p(size_t ptr)
+{
+	int	ptr_print;
+	ptr_print = 0;
+	if (ptr == 0)
+		ptr_print = ptr_print + write(1, "(nil)", 5);
+	else
+	{
+		ptr_print = ptr_print + write(1, "0x", 2);
+		ft_put_ptr(ptr);
+		ptr_print = ptr_print + ft_len_ptr(ptr);
+	}
+	return (ptr_print);
+}
+
 static int ft_print_arg(va_list args, int s)
 {
 	int i;
@@ -132,6 +173,8 @@ static int ft_print_arg(va_list args, int s)
 		i = ft_put_u(va_arg(args, unsigned int));
 	else if (s == 'x' || s == 'X')
 		i = ft_put_x(va_arg(args, unsigned int), s);
+	else if (s == 'p')
+		i = ft_put_p(va_arg(args, void *));
 	return (i);
 }
 
