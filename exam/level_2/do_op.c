@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 14:24:30 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/26 15:58:09 by mbany            ###   ########.fr       */
+/*   Updated: 2024/04/29 13:36:55 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,19 @@ int main(int ac, char *av[])
 {
 	if ( ac == 4)
 	{
+		if (*av[2] == '+')
+			printf("%d",atoi(av[1]) + atoi(av[3]));
+		if (*av[2] == '-')
+			printf("%d",atoi(av[1]) - atoi(av[3]));
+		if (*av[2] == '*')
+			printf("%d",atoi(av[1]) * atoi(av[3]));
+		if (*av[2] == '/')
+			printf("%d",atoi(av[1]) / atoi(av[3]));
+		if (*av[2] == '%')
+			printf("%d",atoi(av[1]) % atoi(av[3]));
 
 	}
 
-	write(1,"\n",1);
+	printf("\n");
 	return 0;
 }
