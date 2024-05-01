@@ -105,14 +105,33 @@ char	*ft_strjoin(char const *s1, char const *s2)
 //utils end
 //my code
 
+int extract_line(line)
+{
+
+}
+
+int read_and_return(a, b, c)
+{
+
+}
+
 int get_next_line(int fd)
 {
   char *line;
   char *buffer;
   static char *backup;
 
-  
-  return(line);
+  if (fd <0 || BUFFER_SIZE <= 0)
+    return (0);
+  buffer = (char *)malloc(sizeof(char) * (BUFFER_SIZE +1));
+  if (!buffer)
+    return (0);
+  line = read_and_return(fd, buffer, backup);
+  free(buffer);
+  if (!line)
+    return (NULL);
+  backup = extract_line(line);
+    return(line);
 }
 
 //main
