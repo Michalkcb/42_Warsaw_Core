@@ -6,86 +6,98 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 12:52:39 by mbany             #+#    #+#             */
-/*   Updated: 2024/03/29 16:09:57 by mbany            ###   ########.fr       */
+/*   Updated: 2024/05/01 15:42:56 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_strdup(char *s1)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*dest;
-	unsigned int	i;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
-	dest = (char *) malloc(ft_strlen(s1) + 1);
-	if (!dest)
+	str = (char *)malloc(sizeof(*s) * (len + 1));
+	if (str == 0)
 		return (NULL);
 	i = 0;
-	while (s1[i])
+	j = 0;
+	while (s[i])
 	{
-		dest[i] = s1[i];
+		if (i >= start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}
 		i++;
 	}
-	dest[i] = 0;
-	return (dest);
+	str[j] = 0;
+	return (str);
 }
 
-size_t	ft_strlen(char *s)
+int	ft_strlen(const char *str)
 {
 	int	i;
 
 	i = 0;
-	while (s[i])
+	while (str[i])
 		i++;
 	return (i);
 }
 
-char	*ft_substr(char *s, unsigned int start, size_t len)
+char	*ft_strchr(const char *s, int i)
 {
-	size_t	i;
+	while (*s)
+	{
+		if (*s == i)
+			return ((char *)s);
+		s++;
+	}
+	if (i == '\0')
+		return ((char *)s);
+	return (0);
+}
+
+char	*ft_strdup(const char *s)
+{
+	int		i;
+	int		j;
 	char	*str;
 
-	if (!s)
-		return (NULL);
-	if (start > ft_strlen(s))
-		return (malloc(1));
-	if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);
-	str = malloc((len + 1) * sizeof(char));
-	if (!str)
-		return (NULL);
 	i = 0;
-	while (i < len)
+	j = ft_strlen(s);
+	str = (char *)malloc(sizeof(*str) * (j + 1));
+	while (i < j)
 	{
-		str[i] = s[start + i];
+		str[i] = s[i];
 		i++;
 	}
-	str[i] = 0;
+	str[i] = '\0';
 	return (str);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*res;
-
-	res = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
-	if (!res)
-		return (NULL);
-	fill_str(res, s1, s2);
-	return (res);
-}
-
-void	fill_str(char *res, char *s1, char *s2)
-{
-	unsigned int	i;
-	unsigned int	j;
+	int i;
+	int j;
+	char *str;
 
 	i = 0;
 	j = 0;
-	while (s1[j])
-		res[i++] = s1[j++];
-	j = 0;
-	while (s2[j])
-		res[i++] = s2[j++];
-	res[i] = '\0';
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	while (s2[j] != '\0')
+	{
+		str[i + j] = s2[j];
+		j++;
+	}
+	str[i + j] = '\0';
+	return (str);
 }
