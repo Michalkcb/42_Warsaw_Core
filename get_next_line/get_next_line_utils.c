@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 12:52:39 by mbany             #+#    #+#             */
-/*   Updated: 2024/05/01 15:42:56 by mbany            ###   ########.fr       */
+/*   Updated: 2024/05/03 15:22:03 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,29 +59,12 @@ char	*ft_strchr(const char *s, int i)
 	return (0);
 }
 
-char	*ft_strdup(const char *s)
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
 	int		j;
 	char	*str;
-
-	i = 0;
-	j = ft_strlen(s);
-	str = (char *)malloc(sizeof(*str) * (j + 1));
-	while (i < j)
-	{
-		str[i] = s[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
-}
-
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	int i;
-	int j;
-	char *str;
 
 	i = 0;
 	j = 0;
