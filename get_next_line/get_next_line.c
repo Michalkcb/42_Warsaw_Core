@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 15:45:44 by mbany             #+#    #+#             */
-/*   Updated: 2024/05/03 15:20:11 by mbany            ###   ########.fr       */
+/*   Updated: 2024/05/07 11:17:40 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static char	*read_and_return(int fd, char *buf, char *backup)
 			break ;
 		buf[read_line] = '\0';
 		if (!backup)
-			backup = ft_strjoin("","");
+			backup = ft_strjoin("", "");
 		char_temp = backup;
 		backup = ft_strjoin(char_temp, buf);
 		free(char_temp);
