@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 12:52:39 by mbany             #+#    #+#             */
-/*   Updated: 2024/05/03 15:22:03 by mbany            ###   ########.fr       */
+/*   Updated: 2024/05/07 10:21:00 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ char	*ft_strchr(const char *s, int i)
 		return ((char *)s);
 	return (0);
 }
-
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
