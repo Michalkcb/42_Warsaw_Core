@@ -44,12 +44,11 @@ int s_len(char *s)
 int rev_print(char *s)
 {
 	int len = s_len(s);
-	int i = len;
 
-	while(i >=0)
+	while(len >=0)
 	{
-		write(1,&s[i],1);
-		i--;
+		write(1,&s[len],1);
+		len--;
 	}
 	return (0);
 }

@@ -57,7 +57,7 @@ int main(int ac, char *av[])
 			if (av[1][i] >= 'A' &&  av[1][i] <= 'Z')
 			{
 				j = 0;
-				while (j < av[1][i]-64)
+				while (j < av[1][i] - 64)
 				{
 					write(1,&av[1][i],1);
 					j++;
