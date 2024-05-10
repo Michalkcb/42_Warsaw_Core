@@ -2,7 +2,7 @@
 
 - 🔭 I’m currently working on
 
-        Libft
+        push_swap
 - 🌱 This projesc si in [![My Skills](https://skillicons.dev/icons?i=c)](https://skillicons.dev) language
 
 ## Stuff I use here 🤓
