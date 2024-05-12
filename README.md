@@ -3,7 +3,7 @@
 - 🔭 I’m currently working on
 
         push_swap
-- 🌱 This projesc si in [![My Skills](https://skillicons.dev/icons?i=c)](https://skillicons.dev) language
+- 🌱 This projesc is in [![My Skills](https://skillicons.dev/icons?i=c)](https://skillicons.dev) language
 
 ## Stuff I use here 🤓
 [![My Skills](https://skillicons.dev/icons?i=c,git,github,vscode)](https://skillicons.dev)
