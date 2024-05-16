@@ -3,7 +3,7 @@
 int main(int ac, char *av[])
 {
 	int i;
-	if (ac == 4 && av[2][0] && av[3][0] && )
+	if (ac == 4 && av[2][0] && av[3][0] )
 	{
 	i = 0;
 		if (!av[2][1])
