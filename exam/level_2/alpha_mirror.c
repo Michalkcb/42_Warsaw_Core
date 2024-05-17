@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   alpha_mirror.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 15:41:03 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/26 11:25:13 by mbany            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 /*
 Assignment name  : alpha_mirror
 Expected files   : alpha_mirror.c
@@ -39,35 +27,23 @@ $>./alpha_mirror | cat -e
 $
 $>
 */
-
 #include <unistd.h>
-#include <stdio.h>
 
-int alpha_mirror(char *s)
+int main(int ac, char *av[])
 {
-
-	int i = 0;
-	while (s[i])
+	if (ac == 2)
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
+		int i = 0;
+		while (av[1][i])
 		{
-			s[i] = 'z' + 'a' - s[i];
-			write(1, &s[i],1);
-			i++;
-		}
-		else if (s[i] >= 'A' && s[i] <= 'Z')
-		{
-			s[i] = 'Z' + 'A' - s[i];
-			write(1, &s[i],1);
-			i++;
+		if (av[1][i] >= 'A' && av[1][i] <= 'Z')
+			av[1][i] = 'Z' + 'A' - av[1][i];
+		else if (av[1][i] >= 'a' && av[1][i] <= 'z')
+			av[1][i] = 'z' + 'a' - av[1][i];
+		write(1,&av[1][i],1);
+		i++;
 		}
 	}
-	write(1, "\n",1);
+	write(1,"\n",1);
 	return 0;
-}
-
-int main()
-{
-	char s[] = "aAzZnNmM";
-	alpha_mirror(s);
 }
