@@ -50,9 +50,6 @@ int main(int ac, char *av[])
 		write(1, &av[1][j], 1);
 		j++;
 	}
-	
-
-		
 	}
 	write(1, "\n",1);
 }
