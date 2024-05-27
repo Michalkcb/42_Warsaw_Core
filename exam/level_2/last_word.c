@@ -13,7 +13,7 @@ If the number of parameters is not 1, or there are no words, display a newline.
 
 Example:
 
-$> ./last_word "FOR PONY" | cat -e
+$> ./last_word 	
 PONY$
 $> ./last_word "this        ...       is sparta, then again, maybe    not" | cat -e
 not$
@@ -34,22 +34,20 @@ int main(int ac, char *av[])
 {
 	if (ac == 2)
 	{
-	int	j;
-	int i;
-
-	i = 0;
-	j = 0;
-	while (av[1][i])
-	{
-		if (av[1][i] == ' ' && av[1][i + 1] >= 33 && av[1][i + 1] <= 126)
-			j = i + 1;
+		int i = 0;
+		while (av[1][i])
+			i++;
+		i--;
+		while (av[1][i] == 32 || av[1][i] == 9)
+			i--;
+		while (av[1][i] > 32)
+			i--;	
 		i++;
-	}
-	while (av[1][j] >= 33 && av[1][j] <= 127)
-	{
-		write(1, &av[1][j], 1);
-		j++;
-	}
+		while (av[1][i] > 32)
+		{
+			write(1, &av[1][i],1);
+			i++;
+		}	
 	}
 	write(1, "\n",1);
 }
