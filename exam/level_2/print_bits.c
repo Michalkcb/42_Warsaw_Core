@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 13:24:54 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/30 15:44:22 by mbany            ###   ########.fr       */
+/*   Updated: 2024/05/24 11:07:32 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,14 @@ int i = 8;
 unsigned char bit = 0;
 while ( i--)
 {
-	bit = (octet >> i & 1) + 48;
+	bit = (octet << i & 1) + 48;
 	write (1,&bit,1);
 }
-
 }
 
 int main()
 {
-	unsigned char octet = 8;
+	unsigned char octet = 4;
 	print_bits(octet);
 }
 

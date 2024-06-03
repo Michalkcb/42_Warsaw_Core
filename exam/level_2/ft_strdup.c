@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 16:34:50 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/30 13:16:10 by mbany            ###   ########.fr       */
+/*   Updated: 2024/06/03 16:29:59 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strdup(char *src)
 {
 	size_t i = 0;
 	size_t len = s_len(src);
-	char *dest = (char *)malloc(sizeof(char)*(len +1));
+	char *dest = (char *)malloc(sizeof(char)*(len + 1));
 	if (!dest)
 		return 0;
 	while (i <len)

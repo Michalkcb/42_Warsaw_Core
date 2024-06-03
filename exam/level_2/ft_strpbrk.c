@@ -10,7 +10,6 @@ Reproduce exactly the behavior of the function strpbrk
 The function should be prototyped as follows:
 
 char	*ft_strpbrk(const char *s1, const char *s2);
-
 STRPBRK(3) (simplified)
 
 NAME
@@ -29,11 +28,9 @@ DESCRIPTION
 RETURN VALUES
      The strpbrk() function return a pointer to the first occurence of any character
      in the string,if no characters occur anywhere in s, strpbrk() returns NULL.
+*/
 
-     */
-
-#include <stddef.h>
-
+#include <stdlib.h>
 
 char	*ft_strpbrk(const char *s1, const char *s2)
 {
@@ -55,15 +52,15 @@ char	*ft_strpbrk(const char *s1, const char *s2)
 	return (NULL);
 }
 
-    #include <stdio.h>
-    #include <string.h>
-    int main()
-    {
-    char *s1 = "qwertyu";
-    char *s2 = "q";
+#include <stdio.h>
+#include <string.h>
 
-   
-        printf("w main: %s\n", ft_strpbrk(s1, s2)); // Wypisanie od znalezionego znaku do końca `s1`
-        printf("w orginal: %s\n", strpbrk(s1, s2)); // Wypisanie od znalezionego znaku do końca `s1`
-
-    }
+int main() {
+    const char *s1 = "hello world";
+    const char *s2 = "r";
+	
+	printf("%s\n",ft_strpbrk(s1, s2) );
+	printf("%s\n",strpbrk(s1, s2) );
+	
+    return 0;
+}

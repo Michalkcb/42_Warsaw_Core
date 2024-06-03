@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:56:02 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/29 15:45:08 by mbany            ###   ########.fr       */
+/*   Updated: 2024/05/24 11:06:37 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ size_t	ft_strcspn(const char *s, const char *reject)
 int main()
 {
 	char *s = "qwerty";
-	char *r = "w";
+	char *r = "e";
 	printf("%zu\n",ft_strcspn(s,r));
 	printf("%zu",strcspn(s,r));
 }

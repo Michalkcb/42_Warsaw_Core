@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:39:56 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/29 14:37:35 by mbany            ###   ########.fr       */
+/*   Updated: 2024/05/28 13:39:33 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(char *s)
 {
 	int sign = 1;
 	long	r = 0;
-	//usumięcie spacji 32 i tabulatorów 9-13
+	//usunięcie spacji 32 i tabulatorów 9-13
 	while (*s == 32 || (*s >= 9 && *s <= 13))
 		s++;
 	if (*s == '-' || *s == '+')
@@ -43,7 +43,7 @@ int	ft_atoi(char *s)
 	while (*s >= '0' && *s <= '9')
 	{
 		r = r * 10 + *s - '0';
-		s++;
+		s++;	
 	}
 	return (sign * (int)r);
 	

@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:37:40 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/29 14:55:21 by mbany            ###   ########.fr       */
+/*   Updated: 2024/06/03 13:35:26 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ RETURN VALUES
 int ft_strcmp(char *s1, char *s2)
 {
 	int i = 0;
-	while ((s1[i] || s2[i]) && s1[i] == s2[i])
+	while ((s1[i] == s2[i]) && (s1[i] && s2[i]))
 		i++;
 	return (s1[i] - s2[i]);
 }
@@ -53,6 +53,6 @@ int ft_strcmp(char *s1, char *s2)
 int main()
 {
 	char *s1 = "aa";
-	char *s2 = "ab";
+	char *s2 = "aa";
 	printf("%d", ft_strcmp(s1, s2));
 }

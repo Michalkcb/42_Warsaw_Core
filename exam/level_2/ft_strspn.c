@@ -6,7 +6,7 @@
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:46:07 by mbany             #+#    #+#             */
-/*   Updated: 2024/04/29 15:47:04 by mbany            ###   ########.fr       */
+/*   Updated: 2024/05/24 11:07:19 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,36 @@ RETURN VALUES
 */
 
 #include <string.h>
+#include <stdio.h>
 
 size_t	ft_strspn(const char *s, const char *accept)
 {
+	int i;
+	int	j;
+	int check;
 
+	i = 0;
+	while (s[i])
+	{
+		j = 0;
+		check = 0;
+		while (accept[j])
+		{
+			if (s[i] == accept[j])
+				check = 1;
+			j++;
+		}
+		if (check == 0)
+			return (i);
+		i++;
+	}
+	return (i);
 }
 
 int main()
 {
-	
+	char *s = "qwerty";
+	char *r = "qwez";
+	printf("%zu\n",ft_strspn(s,r));
+	printf("%zu\n",strspn(s,r));
 }
