@@ -35,25 +35,28 @@ _____________
 #include <unistd.h>
 #include <stdio.h>
 
-unsigned char	reverse_bits(unsigned char octet)
+unsigned char reverse_bits(unsigned char octet)
 {
-unsigned int i = 0;
-unsigned char bit = 0;
-unsigned char *tmp = 0;
-while ( i < 8)
-{
-	bit = (octet >> i & 1) +48;
-	tmp[i] = bit;
-	i++;
+    unsigned char reversed = 0;
+    unsigned int i = 0;
+    while (i < 8)
+    {
+        if (octet & (1 << i))
+        {
+            reversed |= (1 << (7 - i));
+        }
+        i++;
+    }
+    return reversed;
 }
-return (bit);
-}
+
 
 int main()
 {
-	unsigned char octet = 4;
-	reverse_bits(octet);
-	printf("%c", octet);
+    unsigned char octet = 4;
+    printf("Original octet: %u\n", octet);
+    printf("Reversed octet: %u\n", reverse_bits(octet));
+    return 0;
 }
 
 // // C Program to demonstrate
