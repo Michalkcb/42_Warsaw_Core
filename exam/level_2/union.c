@@ -34,23 +34,29 @@ int main(int ac, char *av[])
 {
 	if (ac == 3)
 	{
+		int tab[256] = {0};
 		int i = 0;
-		int j = 0;
-		while (av[1][i] != '\0')
+
+		while (av[1][i])
 		{
-			j = 0;
-			while (av[2][j] != '\0')
+			if (tab[av[1][i]] == 0)
 			{
-				if (av[1][i] == av[2][j])
-					{
-						write(1,&av[1][i],1);
-						break;
-					}
-				j++;
+				tab[av[1][i]] = 1;
+				write(1, &av[1][i], 1);
+			}
+			i++;
+		}
+
+		i=0;
+		while (av[2][i])
+		{
+			if (tab[av[2][i]] == 0)
+			{
+				write(1, &av[2][i], 1);
+				tab[av[2][i]] = 2;
 			}
 			i++;
 		}
 	}
-	write(1,"\n", 1);
-	return 0;
+	write(1,"\n",1);
 }
