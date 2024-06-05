@@ -26,44 +26,30 @@ $
 $>./wdmatch | cat -e
 $
 */
-
 #include <unistd.h>
-
-
-void pstr(char *str)
-{
-	int i = 0;
-	while (str[i] != '\0')
-		{
-			write(1, &str[i],1);
-			i++;
-		}
-	
-}
 
 int main(int ac, char *av[])
 {
 	if (ac == 3)
 	{
-
+		char *s1 = av[1];
+		char *s2 = av[2];
 		int i = 0;
 		int j = 0;
-		while (av[1][i])
+		while (s1[i])
 		{
-			while (av[2][j] && av[1][i] != av[2][j])
+			while (s2[j] && s1[i] != s2[j])
 			{
-				
 				j++;
-				if (av[2][j] == '\0')
+				if (s2[j] == '\0')
 				{
 					write(1,"\n",1);
 					return 0;
 				}
 			}
-			
 			i++;
 		}
-		pstr(av[1]);
+		write(1,s1,i);
 	}
 	write(1,"\n",1);
 	return 0;
