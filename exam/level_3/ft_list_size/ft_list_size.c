@@ -24,9 +24,27 @@ typedef struct    s_list
 #include "ft_list.h"
 
 int ft_list_size(t_list *start_list)
-{
-    if (start_list == 0)
-        return 0;
-    else
-        return (1 + ft_list_size(start_list->next));
+{   
+    int i = 0;
+    while (start_list)
+    {
+        start_list = start_list->next;
+        i++;   
+    }
+    return (i); 
 }
+
+
+/*
+#include <stdio.h>
+int main()
+{
+    t_list el5 = {NULL, "el5"};
+    t_list el4 = {&el5, "el4"};
+    t_list el3 = {&el4, "el3"};
+    t_list el2 = {&el3, "el2"};
+    t_list el1 = {&el2, "el1"};
+    t_list *list = &el1;
+    printf("%d\n", ft_list_size(list));
+}
+*/
