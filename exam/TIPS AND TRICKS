@@ -1,0 +1,123 @@
+FUNKCJA DO WYPISYWANIA INT JAKO CHAR
+void    ft_putnbr(int n)
+{
+    if (n < 0)
+    {
+        write(1, "-", 1);
+        n *= -1;
+    }
+    if (n >= 10)
+        ft_putnbr(n / 10);
+    write(1, &"0123456789"[n % 10], 1);
+}
+
+FUNKCJA DO SZUKANIA SŁOWA
+int	main(int argc, char **argv)
+
+FUNKCJA DO POWTARZANIA LITERY TYLE RAZY ILE NA KTÓREJ POZYCJI JEST W ALFABECIE
+int	main(int argc, char **argv)
+i dla małych liter i duzych
+j dla różnicy pomiędzy literą z ascii a liczbą 'a' - 1 tj. 97 - 1 czyli 96
+to samo na dużych tyko dla "A" - 1 tj. 65 -1 czyli 64
+
+FUNKCJA ATOI
+1 while sprawdzamy białe znaki
+2 if sprawdzmy znak -
+3 while nbr = nbr * 10 + *str - 48 aby wpisywać liczby od lewej strony do prawej, mnożąc przez 10 możemy na miejsce zero wstwić kolejną liczbę.
+4 uzyskany nbr mnożymy przez -1 jeśli znaleziono wczęsnije minus
+
+ADD PRIME SUM
+atoi
+ifprime{
+    int i = 2;
+	if(n == 1)
+		return 0;
+	while (i < n)
+	{
+		if(n % i == 0)
+			return 0;
+		i++;
+	}
+	
+return (1);
+}
+putnumber
+main{
+	if (ac == 2)
+	{
+		int n = ft_atoi(av[1]);
+		int sum = 0;
+		while (n > 0)
+		{
+			if ( ifprime(n) == 1)
+			sum = sum + n;
+			n--;
+		}
+		putn(sum);
+		write(1,"\n",1);
+	}
+	else
+		write(1,"0\n",2);
+	return 0;
+}
+
+EXPAND_STR
+i;
+flag;
+while na ' ' i '\t'
+while (av){
+    if( ' ' || '\t') 
+        flag= 1
+    if!(' ' || '\t'){
+        if(flag)
+            write '   '
+        flag = 0
+        write av    
+    }
+}
+
+LIST_SIZE
+	while (begin_list)
+	{
+		begin_list = begin_list -> next;
+		i++;
+	}
+int main ()
+{
+	t_list node1, node2, node3, node4;
+	node1.data = "1";
+	node2.data = "2";
+	node3.data = "3";
+	node4.data = "4";
+	t_list *list = &node1;
+
+	node1.next = &node2;
+	node2.next = &node3;
+	node3.next = &node4;
+	node4.next = NULL;
+
+	printf("%d\n", ft_list_size(list));	
+}
+
+FT_RANGE
+int len = end > start ? end - start + 1: start - end + 1;
+int *res = (int *)malloc(sizeof(int) * len);
+while ( i < len){
+    if (start < end)
+    else
+}
+
+
+
+nagłówek header w vsc ctrl + alt + h
+
+EGZAMIN
+exam
+exam
+examshell w terminalu
+
+GIT NA EGZAMINIE
+git add .
+git status
+git commit -m "..."
+git push
