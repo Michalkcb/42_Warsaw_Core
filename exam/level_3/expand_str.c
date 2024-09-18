@@ -25,44 +25,33 @@ $
 $> ./expand_str "" | cat -e
 $
 $>
-
-$> ./expand_str "vous   voyez   c'est   facile   d'afficher   la   meme   chose" | cat -e
-vous   voyez   c'est   facile   d'afficher   la   meme   chose$
-$> ./expand_str " seulement          la c'est      plus dur " | cat -e
-seulement   la   c'est   plus   dur$
-$> ./expand_str "comme c'est cocasse" "vous avez entendu, Mathilde ?" | cat -e
-$
-$> ./expand_str "" | cat -e
-$
-$>
 */
-
 #include <unistd.h>
 
 int main (int ac, char *av[])
 {
+	int i;
+	int flag = 0;
+
 	if (ac == 2)
 	{
-		int i = 0;
-		int flag = 0;
-
-		while (av[1][i] == 32 || av[1][i] == 9 )
+		i = 0;
+		while (av[1][i] == ' ' || av[1][i] == '\t')
 			i++;
-		
-		while(av[1][i])
+		while (av[1][i])
 		{
-			if (av[1][i] == 32 || av[1][i] == 9)
+			if (av[1][i] == ' ' || av[1][i] == '\t')
 				flag = 1;
-			if (av[1][i] != 32 && av[1][i] != 9)
-				{
-					if (flag)
-						write(1, "   ",3);
-					flag = 0;
-					write(1, &av[1][i],1);
-				}
-				i++;
+			if (!(av[1][i] == ' ' || av[1][i] == '\t'))
+			{
+				if (flag)
+					write(1, "   ",3);
+				flag = 0;
+				write(1,&av[1][i],1);
+			}
+			i++;
 		}
 	}
-	write(1, "\n",1);
+	write(1,"\n",1);
 	return 0;
 }
