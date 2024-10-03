@@ -1,3 +1,25 @@
+
+SPLIT
+{
+	strncpy
+	word_count
+	ft_split
+		out = maloc na ilość słów
+		out == null => return 0
+		i, one_word = 0
+		w trakcie stringa
+			jeśli spacje\t i++, start = i,jeśli nie i++;
+			jeśli i>start
+				out[one_word] = malloc na jedno słowo
+				strncpy
+				one_word++;
+		out[one_word] = null
+		return(out)
+
+	main
+	printf("", split("abc")[3])
+}
+
 FUNKCJA DO WYPISYWANIA INT JAKO CHAR
 void    ft_putnbr(int n)
 {
@@ -106,6 +128,8 @@ while ( i < len){
     if (start < end)
     else
 }
+
+LCM
 
 
 
