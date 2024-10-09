@@ -29,31 +29,33 @@ $>
 */
 #include <unistd.h>
 
-#include <unistd.h>
-
-int main(int ac, char *av[])
+int rstr_capitalizer (char *s)
 {
-  int i, j;
-  
-  if (ac == 1)
-    write(1, "\n", 1);
-  else
-  {
-    i = 1; // Start from 1 to skip the program name
-    while (i < ac)
-    {
-      j = 0;
-      while (av[i][j])
-      {
-        if (av[i][j] >= 'A' && av[i][j] <= 'Z')
-          av[i][j] += 32;
-        if ((av[i][j] >= 'a' && av[i][j] <= 'z') && (av[i][j + 1] == ' ' || av[i][j + 1] == '\t' || av[i][j + 1] == '\0'))
-          av[i][j] -= 32;
-        write(1, &av[i][j++], 1);
-      }
-      write(1, "\n", 1);
-      i += 1;
-    }
-  }
-  return 0;
+
+	while(*s)
+	{
+		if(*s >= 'A' && *s <= 'Z')
+			*s += 32;
+		if((*s >= 'a' && *s <= 'z') && ((*(s+1) == ' ' || *(s+1) == '\t' || *(s+1) == 0)))
+			*s -= 32;
+		write(1, &*s,1);
+		s++;
+	}
+	return 0;
+}
+int main(int ac, char **av)
+{
+	if(ac > 1)
+	{
+		int i = 1;
+		while( i < ac)
+		{
+			rstr_capitalizer(av[i]);
+			write(1, "\n",1);
+			i++;
+		}
+
+	}
+	write(1, "\n",1);
+	return 0;
 }
