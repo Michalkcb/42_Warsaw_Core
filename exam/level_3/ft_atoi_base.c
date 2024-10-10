@@ -19,6 +19,7 @@ string.
 Your function must be declared as follows:
 
 int	ft_atoi_base(const char *str, int str_base);
+a dodam coś żeby mieć commit
 */
 int is_in_base(char c, int base)
 {
