@@ -40,7 +40,7 @@ int	ft_atoi_base(const char *str, int str_base)
 	}
 	while(str[i] == '-' || str[i] == '+')
 		i++;
-	while(str[i])
+	while(str[i] && is_in_base(str[i], str_base))
 	{
 		if(str[i] >= '0' && str[i] <= '9')
 			result = result * str_base + str[i] - '0';
