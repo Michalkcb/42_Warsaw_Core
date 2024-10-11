@@ -28,28 +28,28 @@ $>
 */
 #include <unistd.h>
 
+#include <unistd.h>
 int main(int ac, char **av)
 {
-	if( ac == 2)
+	if(ac == 2)
 	{
-		int i = 0;
 		int flag = 0;
-		while ( av[1][i] == ' ' || av[1][i] == '\t')
-			i++;
-		while (av[1][i])
+		char *s = av[1];
+		while(*s == ' ' || (*s>= 9 && *s <= 13))
+			s++;
+		while(*s)
 		{
-			if (av[1][i] == ' ' || av[1][i] == '\t')
+			if(*s == ' ' || (*s>= 9 && *s <= 13))
 				flag = 1;
-			if(!(av[1][i] == ' ' || av[1][i] == '\t'))
+			if(!(*s == ' ' || (*s>= 9 && *s <= 13)))
 			{
 				if(flag)
 					write(1," ",1);
 				flag = 0;
-				write(1,&av[1][i],1);
+				write(1,&*s,1);
 			}
-			i++;
+			s++;
 		}
-
 	}
 	write(1,"\n",1);
 	return 0;
