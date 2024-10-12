@@ -35,29 +35,81 @@ $
 */
 #include <stdio.h>
 #include <stdlib.h>
-int main (int ac, char *av[])
+
+int main(int ac, char **av)
 {
-		int i;
-		int number;
-	if (ac == 2)
+	if(ac == 2)
 	{
-		i = 1;
-		number = atoi(av[1]);
-		if (number == 1)
+		int n = atoi(av[1]);
+		int i = 2;
+		if(n == 1)
 			printf("1");
-		while (number > i++)
+		else
 		{
-			if(number % i == 0)
+			while(n > 1)
 			{
-				printf("%d", i);
-				if (number == i)
-					break;
-				printf("*");
-				number /= i;
-				i = 1;
+				if((n % i) == 0)
+				{
+					printf("%d",i);
+					n/=i;
+					if(n > 1)
+						printf("*");
+				}
+				else
+					i++;
 			}
 		}
+
 	}
 	printf("\n");
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// int main(int ac, char *av[])
+// {
+//     int i = 2;
+//     int number = atoi(av[1]);
+
+//     if (ac == 2)
+//     {
+//         if (number == 1)
+//             printf("1");
+
+//         else
+//         {
+//             while (number > 1)
+//             {
+//                 if (number % i == 0)
+//                 {
+//                     printf("%d", i);
+//                     number /= i;
+//                     if (number > 1)
+//                         printf("*");
+//                 }
+//                 else
+//                     i++;
+//             }
+//         }
+//     }
