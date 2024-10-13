@@ -36,20 +36,19 @@ $>
 #include <unistd.h>
 int first_word(char *s)
 {
-int i = 0;
-while(s[i] == ' ' || s[i] == '\t')
-	i++;
-while(s[i] != ' ' && s[i] != '\t' && s[i] != '\0')
+while(*s == ' ' || *s == '\t')
+	s++;
+while(*s != ' ' && *s != '\t' && *s != '\0')
 {
-	write(1, &s[i],1);
-	i++;
+	write(1, &*s,1);
+	s++;
 }
 
 return 0;
 }
 int main( int ac, char **av)
 {
-	if(ac >1)
+	if(ac > 1)
 	{
 		char *s = av[1];
 		int i = 0;
