@@ -26,6 +26,7 @@ $>
 $>./union "rien" | cat -e
 $
 $>
+ok
 */
 
 #include <unistd.h>
