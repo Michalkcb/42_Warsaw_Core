@@ -61,32 +61,30 @@ int main()
 /* GOOD CODE | GOOD CODE | GOOD CODE | GOOD CODE | GOOD CODE |
 VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 	*/
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *n)
 {
     int s = 1;
     int r = 0;
+    // char *n;
+    int i = 0;
 
- 
-    if(*str == '-' && *(str+1) == '2' && *(str+2) == '1'&& *(str+3) == '4'&& *(str+4) == '7'&& *(str+5) == '4'&& *(str+6) == '8'&& *(str+7) == '3'&& *(str+8) == '6'&& *(str+9) == '4'&& *(str+10) == '8')
-        return(-2147483648);
+    // n = (char *) str;
 
-
-
-    while(*str == ' ' || (*str >= 9 && *str <= 13))
-        str++;
-	if (*str == '-' || *str == '+')
+    while(n[i] == ' ' || (n[i] >= 9 && n[i] <= 13))
+        i++;
+	if (n[i] == '-' || n[i] == '+')
 	{
-		if (*str == '-')
+		if (n[i] == '-')
 			s = -1;
-		str++;
+		i++;
 	}
-    while(*str != 0)
+    while(n[i] != 0)
     {
-        if(*str >= '0' && *str <= '9')
-            r = r * 10 + *str - '0';
+        if(n[i] >= '0' && n[i] <= '9')
+            r = r * 10 + n[i] - '0';
         else
             break;
-        str++;
+        i++;
     }
     return(s * r);
 }
