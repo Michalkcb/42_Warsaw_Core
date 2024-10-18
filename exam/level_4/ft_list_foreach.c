@@ -41,8 +41,11 @@ void print_element(void *data)
     printf("%s", (char *)data);
 }
 
+
+#include <stdlib.h>
 int main ()
 {
+	// char s = '5';
 	t_list node1, node2, node3, node4;
 	node1.data = "1";
 	node2.data = "2";
@@ -55,6 +58,7 @@ int main ()
 	node4.next = NULL;
 
 	ft_list_foreach(&node1, print_element);
+	// ft_list_foreach(&node1, atoi(s));
 
 	return 0;
 
