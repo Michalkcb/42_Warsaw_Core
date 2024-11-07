@@ -42,7 +42,7 @@
 <tr>
 <td></td>
 <td></td>
-<td><a href="https://github.com/pasqualerossi/Printf">Printf</a></td>
+<td><a https://github.com/Michalkcb/42_Warsaw_Core/tree/main/ft_printf">Printf</a></td>
 <td><a href="https://github.com/Michalkcb/42_so_long">So_Long</a></td>
 <td>Not yet</td>
 <td>Not yet</td>
