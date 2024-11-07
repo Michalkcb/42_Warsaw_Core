@@ -32,12 +32,12 @@
 <tr>
 <td><a href="https://github.com/pasqualerossi/42-School-Guide">Common Core Overview</a></td>
 <td><a href="https://github.com/pasqualerossi/Libft">Libft</a></td>
-<td><a href="https://github.com/pasqualerossi/Born2BeRoot-Guide">Born2BeRoot</a></td>
+<td>No guide</td>
 <td><a href="https://github.com/pasqualerossi/MiniTalk">MiniTalk</a></td>
 <td><a href="https://github.com/pasqualerossi/Philosophers">Philosophers</a></td>
-<td><a href="https://github.com/pasqualerossi/NetPractice">NetPractice</a></td>
-<td><a href="https://github.com/pasqualerossi/Inception">Inception</a></td>
-<td><a href="https://github.com/pasqualerossi/42_Transcendence">Transcendence</a></td>
+<td>Not yet</td>
+<td>Not yet</td>
+<td>Not yet</td>
 </tr>
 <tr>
 <td></td>
@@ -45,8 +45,8 @@
 <td><a href="https://github.com/pasqualerossi/Printf">Printf</a></td>
 <td><a href="https://github.com/pasqualerossi/So_Long">So_Long</a></td>
 <td><a href="https://github.com/pasqualerossi/Minishell">Minishell</a></td>
-<td><a href="https://github.com/pasqualerossi/Cub3D">Cub3D</a></td>
-<td><a href="https://github.com/pasqualerossi/IRC">IRC</a></td>
+<td>Not yet</td>
+<td>Not yet</td>
 <td></td>
 </tr>
 <tr>
