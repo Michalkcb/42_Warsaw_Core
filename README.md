@@ -43,7 +43,7 @@
 <td></td>
 <td></td>
 <td><a href="https://github.com/pasqualerossi/Printf">Printf</a></td>
-<td><a href="https://github.com/pasqualerossi/So_Long">So_Long</a></td>
+<td><a href="https://github.com/Michalkcb/42_so_long">So_Long</a></td>
 <td><a href="https://github.com/pasqualerossi/Minishell">Minishell</a></td>
 <td>Not yet</td>
 <td>Not yet</td>
