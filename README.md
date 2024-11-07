@@ -32,7 +32,7 @@
 <tr>
 <td><a href="https://github.com/pasqualerossi/42-School-Guide">Common Core Overview</a></td>
 <td><a href="https://github.com/Michalkcb/42_Warsaw_Core/tree/main/libft">Libft</a></td>
-<td>No guide</td>
+<td>Born 2 be root</td>
 <td><a href="https://github.com/Michalkcb/42_Minitalk">MiniTalk</a></td>
 <td><a href="https://github.com/Michalkcb/42_philosophers">Philosophers</a></td>
 <td>Not yet</td>
