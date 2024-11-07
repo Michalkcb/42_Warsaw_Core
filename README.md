@@ -34,7 +34,7 @@
 <td><a href="https://github.com/pasqualerossi/Libft">Libft</a></td>
 <td>No guide</td>
 <td><a href="https://github.com/pasqualerossi/MiniTalk">MiniTalk</a></td>
-<td><a href="https://github.com/pasqualerossi/Philosophers">Philosophers</a></td>
+<td><a href="https://github.com/Michalkcb/42_philosophers">Philosophers</a></td>
 <td>Not yet</td>
 <td>Not yet</td>
 <td>Not yet</td>
