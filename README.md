@@ -53,7 +53,7 @@
 <td></td>
 <td></td>
 <td><a href="https://github.com/pasqualerossi/Get_Next_Line">Get_Next_Line</a></td>
-<td><a href="https://github.com/pasqualerossi/Push_Swap">Push_Swap</a></td>
+<td><a href="https://github.com/Michalkcb/42_push_swap">Push_Swap</a></td>
 <td></td>
 <td>Not yet</td>
 <td></td>
