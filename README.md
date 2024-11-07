@@ -39,7 +39,6 @@
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><a href="https://github.com/Michalkcb/42_Warsaw_Core/tree/main/ft_printf">Printf</a></td>
 <td><a href="https://github.com/Michalkcb/42_so_long">So_Long</a></td>
 <td>Not yet</td>
@@ -48,7 +47,6 @@
 <td></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><a href="https://github.com/Michalkcb/42_Warsaw_Core/tree/main/get_next_line">Get_Next_Line</a></td>
 <td><a href="https://github.com/Michalkcb/42_push_swap">Push_Swap</a></td>
