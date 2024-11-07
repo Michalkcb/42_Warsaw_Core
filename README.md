@@ -8,7 +8,61 @@
 ## Stuff I use here 🤓
 [![My Skills](https://skillicons.dev/icons?i=c,git,github,vscode)](https://skillicons.dev)
 
-
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto">🧛 42 Common Core Student</h2><a id="user-content-vampire-42-common-core-student" class="anchor" aria-label="Permalink: :vampire: 42 Common Core Student" href="#vampire-42-common-core-student"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<markdown-accessiblity-table data-catalyst=""><table tabindex="0">
+<tbody><tr>
+<th align="left"> &nbsp; Common Core Projects</th>
+</tr>
+<tr>
+<td>
+<table>
+<thead>
+<tr>
+<th>Guide</th>
+<th>Circle 0</th>
+<th>Circle 1</th>
+<th>Circle 2</th>
+<th>Circle 3</th>
+<th>Circle 4</th>
+<th>Circle 5</th>
+<th>Circle 6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/pasqualerossi/42-School-Guide">Common Core Overview</a></td>
+<td><a href="https://github.com/pasqualerossi/Libft">Libft</a></td>
+<td><a href="https://github.com/pasqualerossi/Born2BeRoot-Guide">Born2BeRoot</a></td>
+<td><a href="https://github.com/pasqualerossi/MiniTalk">MiniTalk</a></td>
+<td><a href="https://github.com/pasqualerossi/Philosophers">Philosophers</a></td>
+<td><a href="https://github.com/pasqualerossi/NetPractice">NetPractice</a></td>
+<td><a href="https://github.com/pasqualerossi/Inception">Inception</a></td>
+<td><a href="https://github.com/pasqualerossi/42_Transcendence">Transcendence</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="https://github.com/pasqualerossi/Printf">Printf</a></td>
+<td><a href="https://github.com/pasqualerossi/So_Long">So_Long</a></td>
+<td><a href="https://github.com/pasqualerossi/Minishell">Minishell</a></td>
+<td><a href="https://github.com/pasqualerossi/Cub3D">Cub3D</a></td>
+<td><a href="https://github.com/pasqualerossi/IRC">IRC</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="https://github.com/pasqualerossi/Get_Next_Line">Get_Next_Line</a></td>
+<td><a href="https://github.com/pasqualerossi/Push_Swap">Push_Swap</a></td>
+<td></td>
+<td><a href="https://github.com/pasqualerossi/C-Plus-Plus">C++ Modules</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr></tbody></table></markdown-accessiblity-table>
 Codewars Profile Badges
 <br>
 <span>
