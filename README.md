@@ -18,7 +18,6 @@
 <table>
 <thead>
 <tr>
-<th>Guide</th>
 <th>Circle 0</th>
 <th>Circle 1</th>
 <th>Circle 2</th>
@@ -30,7 +29,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/pasqualerossi/42-School-Guide">Common Core Overview</a></td>
 <td><a href="https://github.com/Michalkcb/42_Warsaw_Core/tree/main/libft">Libft</a></td>
 <td>Born 2 be root</td>
 <td><a href="https://github.com/Michalkcb/42_Minitalk">MiniTalk</a></td>
